@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Provider} from 'react-redux'
+import store from './store'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -21,6 +26,7 @@ class App extends Component {
           </a>
         </header>
       </div>
+      </Provider>
     );
   }
 }
